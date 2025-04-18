@@ -16,11 +16,12 @@ const router = createBrowserRouter([
                 path: '/',
                 Component: Home,
                 hydrateFallbackElement: <span className="loading loading-infinity loading-xl text-error"></span>,
-                loader: ()=> fetch('phones.json')
+                loader: ()=> fetch('../phones.json')
             },
             {
-                path: '/phone-details',
-                Component: PhoneDetails
+                path: '/phone-details/:phoneId',
+                Component: PhoneDetails,
+                loader: ()=> fetch('../phones.json')
             },
             {
                 path: '/about',

@@ -14,7 +14,9 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                Component: Home
+                Component: Home,
+                hydrateFallbackElement: <span className="loading loading-infinity loading-xl text-error"></span>,
+                loader: ()=> fetch('phones.json')
             },
             {
                 path: '/phone-details',

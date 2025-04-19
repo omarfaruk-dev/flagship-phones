@@ -12,7 +12,7 @@ const PhonesContainer = ({ phones }) => {
         } else {
             setDisplayPhones(phones.slice(0, 6))
         }
-    }, [phones, showAll])
+    }, [phones, showAll]) 
 
     return (
         <div className='py-12'>
@@ -34,6 +34,7 @@ const PhonesContainer = ({ phones }) => {
             </button> */}
 
             {/* Dynamic button */}
+            
             <Button type='submit'
             onClick={() => {setShowAll(!showAll)
                 if (showAll) window.scrollTo(0, 420)}}

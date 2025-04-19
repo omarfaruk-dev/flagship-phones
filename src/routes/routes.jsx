@@ -21,6 +21,7 @@ const router = createBrowserRouter([
             {
                 path: '/phone-details/:phoneId',
                 Component: PhoneDetails,
+                hydrateFallbackElement: <span className="loading loading-infinity loading-xl text-error"></span>,
                 loader: ()=> fetch('../phones.json')
             },
             {
